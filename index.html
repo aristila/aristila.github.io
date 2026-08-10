@@ -34,9 +34,27 @@
         }
 
         header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
             border-bottom: 2px solid var(--border-color);
-            padding-bottom: 20px;
+            padding-bottom: 25px;
             margin-bottom: 30px;
+        }
+
+        .header-text {
+            flex: 1;
+        }
+
+        .profile-pic {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-color);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            flex-shrink: 0;
         }
 
         h1 {
@@ -50,7 +68,7 @@
             font-size: 1.1rem;
             color: var(--accent-color);
             font-weight: 600;
-            margin-bottom: 15px;
+            margin-bottom: 0;
         }
 
         h2 {
@@ -131,14 +149,29 @@
         a:hover {
             text-decoration: underline;
         }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .profile-pic {
+                width: 120px;
+                height: 120px;
+            }
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
         <header>
-            <h1>Hi, I'm Anna!</h1>
-            <div class="subtitle">Doctoral Researcher in Digital Language Studies | University of Turku</div>
+            <div class="header-text">
+                <h1>Hi, I'm Anna!</h1>
+                <div class="subtitle">Doctoral Researcher in Digital Language Studies | University of Turku</div>
+            </div>
+            <img src="me.jpg" alt="Anna Ristilä" class="profile-pic">
         </header>
 
         <section id="about">
