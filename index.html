@@ -35,9 +35,9 @@
 
         header {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: space-between;
-            gap: 25px;
+            gap: 30px;
             border-bottom: 2px solid var(--border-color);
             padding-bottom: 25px;
             margin-bottom: 30px;
@@ -48,12 +48,12 @@
         }
 
         .profile-pic {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--accent-color);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             flex-shrink: 0;
         }
 
@@ -118,9 +118,14 @@
             margin-bottom: 12px;
         }
 
-        .project-title {
+        .project-title a {
             font-weight: 600;
             color: var(--primary-color);
+        }
+
+        .project-title a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
         }
 
         .project-dates {
@@ -129,7 +134,7 @@
         }
 
         .pub-list li {
-            margin-bottom: 12px;
+            margin-bottom: 14px;
             line-height: 1.5;
         }
 
@@ -153,12 +158,12 @@
         @media (max-width: 600px) {
             header {
                 flex-direction: column-reverse;
+                align-items: center;
                 text-align: center;
             }
 
             .profile-pic {
-                width: 120px;
-                height: 120px;
+                width: 180px;
             }
         }
     </style>
@@ -207,40 +212,44 @@
             <h2>Research Projects</h2>
             <ul>
                 <li class="project-item">
-                    <span class="project-title">INTRAPOL</span> <span class="project-dates">(2023–2024)</span><br>
+                    <span class="project-title"><a href="https://sites.utu.fi/intrapol/research/" target="_blank" rel="noopener">INTRAPOL</a></span> <span class="project-dates">(2023–2024)</span><br>
                     Intra-party politics in the past and the present
                 </li>
                 <li class="project-item">
-                    <span class="project-title">KIERA</span> <span class="project-dates">(2023–2024)</span><br>
+                    <span class="project-title"><a href="https://sites.utu.fi/kiera/" target="_blank" rel="noopener">KIERA</a></span> <span class="project-dates">(2023–2024)</span><br>
                     Z-sukupolven kieli-ideologiat
                 </li>
                 <li class="project-item">
-                    <span class="project-title">SEMPARL</span> <span class="project-dates">(2021–2022)</span><br>
+                    <span class="project-title"><a href="https://seco.cs.aalto.fi/projects/semparl/en/" target="_blank" rel="noopener">SEMPARL</a></span> <span class="project-dates">(2021–2022)</span><br>
                     Semantic Parliament: Linked Open Data Service for Studying Political Culture
                 </li>
                 <li class="project-item">
-                    <span class="project-title">PSEUDOHISTORIA</span> <span class="project-dates">(2019–2020)</span><br>
+                    <span class="project-title"><a href="https://sites.utu.fi/pseudohistoria/" target="_blank" rel="noopener">PSEUDOHISTORIA</a></span> <span class="project-dates">(2019–2020)</span><br>
                     Muinaiset kuningaskunnat ja Venäjän perustajat: pseudohistoria ja historiapolitiikka 2000-luvun Suomessa
                 </li>
                 <li class="project-item">
-                    <span class="project-title">VICE</span> <span class="project-dates">(2019–2020)</span><br>
+                    <span class="project-title"><a href="https://viralculture.net/" target="_blank" rel="noopener">VICE</a></span> <span class="project-dates">(2019–2020)</span><br>
                     Viral Culture in Early Nineteenth-Century Europe
                 </li>
             </ul>
         </section>
 
         <section id="publications">
-            <h2>Selected Publications</h2>
+            <h2>Selected Publications & Datasets</h2>
             <ul class="pub-list">
                 <li><strong>Ristilä, A.</strong> (2026). <em>Topic Landscape of the Finnish Parliament – Changes and Constants</em>. Doctoral Dissertation, University of Turku.</li>
-                <li><strong>Ristilä, A.</strong>, Tarkka, O., Laippala, V., & Elo, K. (2026). Hopes and Fears -- Emotion Distribution in the Topic Landscape of Finnish Parliamentary Speech 2000–2020. <em>arXiv preprint arXiv:2601.20424</em>.</li>
-                <li><strong>Ristilä, A.</strong> (2025). Functions of English and Latin in the Parliament of Finland 1970–2020. <em>Digital Humanities in the Nordic and Baltic Countries Publications</em>, 7(1), 50–67.</li>
-                <li><strong>Ristilä, A.</strong> (2025). Turku vai Åbo? Kaupungin nimen eri kielimuodot eduskunnan aihemaisemassa. In <em>Kieli maisemassa, maisema kielessä: tutkimuksia Turusta</em> (pp. 373–405). Suomalaisen Kirjallisuuden Seura.</li>
-                <li>Oivo, T., Oiva, M., & <strong>Ristilä, A.</strong> (2026). Conspiracism on the Runet: Text Reuse and the Formation of a Conspiracy Theory. <em>Canadian Journal of European and Russian Studies</em>.</li>
-                <li><strong>Ristilä, A.</strong>, & Elo, K. (2023). Observing political and societal changes in Finnish parliamentary speech data, 1980–2010, with topic modeling. <em>Parliaments, Estates and Representation</em>, 43(2).</li>
-                <li>Oiva, M., & <strong>Ristilä, A.</strong> (2022). Mapping the pseudohistorical knowledge space in the Russian World Wide Web.</li>
-                <li>Aali, H., Oiva, M., & <strong>Ristilä, A.</strong> (2021). Suomalainen, ruotsalainen, normanni vai slaavi? – Venäjän perustaja Rurikin alkuperä suomalaisissa ja venäläisissä 2000-luvun verkkokeskusteluissa. <em>Historiallinen Aikakauskirja</em>.</li>
-                <li>Välimäki, R., Seuri, O., & <strong>Ristilä, A.</strong> (2021). Pseudohistoriaa Suomen muinaisista kuningaskunnista – Ongelmallisen tiedon kierto laitaoikeiston mediaekosysteemissä. <em>niin & näin</em>.</li>
+                <li>Oivo, T., Oiva, M., & <strong>Ristilä, A.</strong> (2026). Conspiracism on the Runet: Text Reuse and the Formation of a Conspiracy Theory. <em>Canadian Journal of European and Russian Studies</em>, 19(1), 1–25. <a href="https://doi.org/10.22215/cjers.v19i1.4960" target="_blank" rel="noopener">https://doi.org/10.22215/cjers.v19i1.4960</a></li>
+                <li><strong>Ristilä, A.</strong>, Tarkka, O., Laippala, V., & Elo, K. (2026). Hopes and Fears -- Emotion Distribution in the Topic Landscape of Finnish Parliamentary Speech 2000–2020. <em>arXiv preprint</em>. <a href="https://doi.org/10.48550/arXiv.2601.20424" target="_blank" rel="noopener">https://doi.org/10.48550/arXiv.2601.20424</a></li>
+                <li><strong>Ristilä, A.</strong> (2025). Turku vai Åbo? Kaupungin nimen eri kielimuodot eduskunnan aihemaisemassa. In H. Lantto et al. (Eds.), <em>Kieli maisemassa, maisema kielessä: tutkimuksia Turusta</em> (pp. 373–405). SKS. <a href="https://doi.org/10.21435/tl.292" target="_blank" rel="noopener">https://doi.org/10.21435/tl.292</a></li>
+                <li><strong>Ristilä, A.</strong> (2025). Functions of English and Latin in the Parliament of Finland 1970–2020. <em>Digital Humanities in the Nordic and Baltic Countries Publications</em>, 7(1), 50–67. <a href="https://journals.uio.no/dhnbpub/article/view/12235" target="_blank" rel="noopener">Article link</a></li>
+                <li>Ristilä, A., & Erten-Johansson, S. (2025). Reviews: Dimensions of Linguistic Variation. <em>Linguist List</em>, 36:2063. <a href="https://linguistlist.org/issues/36/3065/" target="_blank" rel="noopener">Review link</a></li>
+                <li><strong>Ristilä, A.</strong>, & Elo, K. (2023). Observing political and societal changes in Finnish parliamentary speech data, 1980–2010, with topic modeling. <em>Parliaments, Estates and Representation</em>, 43(2). <a href="https://doi.org/10.1080/02606755.2023.2213550" target="_blank" rel="noopener">https://doi.org/10.1080/02606755.2023.2213550</a></li>
+                <li>Oiva, M., & <strong>Ristilä, A.</strong> (2022). Mapping the Pseudohistorical Knowledge Space in the Russian World Wide Web. In R. Välimäki (Ed.), <em>Medievalism in Finland and Russia</em> (pp. 57–71). Bloomsbury Academic.</li>
+                <li>Kiiskinen, H., Aho, M., Nivala, A., <strong>Ristilä, A.</strong>, & Salmi, H. (2022). <em>Viral Culture in Early Nineteenth-Century Europe newspaper dataset</em> [Dataset]. Zenodo. <a href="https://doi.org/10.5281/zenodo.6697271" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.6697271</a></li>
+                <li>Aali, H., Oiva, M., & <strong>Ristilä, A.</strong> (2021). Suomalainen, ruotsalainen, normanni vai slaavi? Venäjän perustaja Rurikin alkuperä suomalaisissa ja venäläisissä 2000-luvun verkkokeskusteluissa. <em>Historiallinen Aikakauskirja</em>, 119(4), 419–431.</li>
+                <li>Välimäki, R., Seuri, O., & <strong>Ristilä, A.</strong> (2021). Pseudohistoriaa Suomen muinaisista kuningaskunnista – Ongelmallisen tiedon kierto laitaoikeiston mediaekosysteemissä. <em>niin & näin</em>, 108(1), 118–135.</li>
+                <li>Välimäki, R., & <strong>Ristilä, A.</strong> (2021). Muinainen itsenäisyys suomalaisessa historiantutkimuksessa ja historiakulttuurissa 1920–2020. <em>Historiallinen Aikakauskirja</em>, 119(4), 406–418.</li>
+                <li><strong>Ristilä, A.</strong> (2019). <em>PHist web scraper and documentation</em> [Code/Program]. GitHub. <a href="https://github.com/aristila/PHist" target="_blank" rel="noopener">Repository link</a></li>
             </ul>
         </section>
 
